@@ -17,9 +17,9 @@ public class DefaultServiceRegistry implements ServiceRegistry {
     private static final Logger logger = LoggerFactory.getLogger(DefaultServiceRegistry.class);
 
     // 用于存储服务实例的映射，保证线程安全
-    private final Map<String, Object> serviceMap = new ConcurrentHashMap<>();
+    private static final Map<String, Object> serviceMap = new ConcurrentHashMap<>();
     // 记录已注册服务的名称，保证线程安全
-    private final Set<String> registeredService = ConcurrentHashMap.newKeySet();
+    private static final Set<String> registeredService = ConcurrentHashMap.newKeySet();
 
     // 注册服务方法，线程安全
     @Override

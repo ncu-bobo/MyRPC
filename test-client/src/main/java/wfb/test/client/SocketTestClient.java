@@ -2,12 +2,14 @@ package wfb.test.client;
 
 import wfb.rpc.api.HelloObject;
 import wfb.rpc.api.HelloService;
-import wfb.rpc.core.client.RpcClientProxy;
+import wfb.rpc.core.RpcClientProxy;
+import wfb.rpc.core.socket.client.SocketClient;
 
-public class TestClient {
+public class SocketTestClient {
 
     public static void main(String[] args) {
-        RpcClientProxy proxy = new RpcClientProxy("127.0.0.1", 9000);
+        SocketClient client = new SocketClient("127.0.0.1", 9000);
+        RpcClientProxy proxy = new RpcClientProxy(client);
         // 生成代理对象HelloService类
         HelloService helloService = proxy.getProxy(HelloService.class);
         // 封装好一个请求对象

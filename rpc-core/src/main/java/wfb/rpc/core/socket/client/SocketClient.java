@@ -1,4 +1,4 @@
-package wfb.rpc.core.client;
+package wfb.rpc.core.socket.client;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,18 +7,25 @@ import wfb.rpc.common.entity.RpcResponse;
 import wfb.rpc.common.enumeration.ResponseCode;
 import wfb.rpc.common.enumeration.RpcError;
 import wfb.rpc.common.exception.RpcException;
+import wfb.rpc.core.RpcClient;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
-public class RpcClient {
+public class SocketClient implements RpcClient {
 
-    private static final Logger logger = LoggerFactory.getLogger(RpcClient.class);
+    private static final Logger logger = LoggerFactory.getLogger(SocketClient.class);
+    private final String host;
+    private final int port;
 
+    public SocketClient(String host, int port) {
+        this.host = host;
+        this.port = port;
+    }
     // 发送请求
-    public Object sendRequest(RpcRequest rpcRequest, String host, int port) {
+    public Object sendRequest(RpcRequest rpcRequest) {
         // 与服务端建立连接
         try (Socket socket = new Socket(host, port)) {
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream());

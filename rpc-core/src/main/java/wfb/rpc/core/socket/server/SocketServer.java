@@ -1,17 +1,19 @@
-package wfb.rpc.core.server;
+package wfb.rpc.core.socket.server;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import wfb.rpc.core.RpcServer;
 import wfb.rpc.core.registry.ServiceRegistry;
+import wfb.rpc.core.RequestHandler;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.*;
 
-public class RpcServer {
+public class SocketServer implements RpcServer {
 
-    private static final Logger logger = LoggerFactory.getLogger(RpcServer.class);
+    private static final Logger logger = LoggerFactory.getLogger(SocketServer.class);
 
     private static final int CORE_POOL_SIZE = 5;
     private static final int MAXIMUM_POOL_SIZE = 50;
@@ -26,7 +28,7 @@ public class RpcServer {
      *
      * @param serviceRegistry 用于注册和查找服务的服务注册表。
      */
-    public RpcServer(ServiceRegistry serviceRegistry) {
+    public SocketServer(ServiceRegistry serviceRegistry) {
         this.serviceRegistry = serviceRegistry;
 
         // 创建一个阻塞队列来存储任务

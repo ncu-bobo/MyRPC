@@ -4,36 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="205fcbc2-96e2-461c-8cbc-5cb592666aaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-api/src/main/java/wfb/rpc/api/HelloObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-api/src/main/java/wfb/rpc/api/HelloService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/wfb/rpc/common/entity/RpcRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/wfb/rpc/common/entity/RpcResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/wfb/rpc/common/enumeration/ResponseCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/wfb/rpc/common/enumeration/RpcError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/wfb/rpc/common/exception/RpcException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/client/RpcClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/client/RpcClientProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/registry/DefaultServiceRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/registry/ServiceRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/server/RequestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/server/RequestHandlerThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/server/RpcServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-client/src/main/java/wfb/test/client/TestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-server/src/main/java/wfb.test.server/HelloServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-server/src/main/java/wfb.test.server/TestServer.java" afterDir="false" />
+    <list default="true" id="205fcbc2-96e2-461c-8cbc-5cb592666aaf" name="Changes" comment="添加了README.md文件">
+      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/wfb/rpc/common/enumeration/PackageType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/wfb/rpc/common/enumeration/SerializerCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/wfb/rpc/common/exception/SerializeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/wfb/rpc/common/util/ThreadPoolFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/RpcClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/RpcServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/codec/CommonDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/codec/CommonEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/netty/client/NettyClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/netty/client/NettyClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/netty/server/NettyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/netty/server/NettyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/serializer/CommonSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/serializer/HessianSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/serializer/JsonSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/serializer/KryoSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-client/src/main/java/wfb/test/client/NettyTestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-server/src/main/java/wfb.test.server/NettyTestServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-api/src/main/java/wfb/rpc/api/HelloObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-api/src/main/java/wfb/rpc/api/HelloObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/wfb/rpc/common/entity/RpcRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/src/main/java/wfb/rpc/common/entity/RpcRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/wfb/rpc/common/enumeration/RpcError.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/src/main/java/wfb/rpc/common/enumeration/RpcError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/client/RpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/socket/client/SocketClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/client/RpcClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/RpcClientProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/registry/DefaultServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/registry/DefaultServiceRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/server/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/RequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/server/RequestHandlerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/socket/server/RequestHandlerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/server/RpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/wfb/rpc/core/socket/server/SocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-client/src/main/java/wfb/test/client/TestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-client/src/main/java/wfb/test/client/SocketTestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-server/src/main/java/wfb.test.server/TestServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-server/src/main/java/wfb.test.server/SocketTestServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +53,23 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2dJ5IjbFXHoIh9h7e28GV8rTd9u" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -58,6 +80,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.NettyTestClient.executor": "Run",
+    "Application.NettyTestServer.executor": "Run",
     "Application.TestClient.executor": "Run",
     "Application.TestServer.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
@@ -67,22 +91,34 @@
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "11",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/java_projects/MyRPC",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java_projects\MyRPC\rpc-common\src\main\java\wfb\rpc\common\enumeration" />
+      <recent name="D:\java_projects\MyRPC\rpc-core\src\main\java\wfb\rpc\core" />
+      <recent name="D:\java_projects\MyRPC\rpc-core\src\main\java\wfb\rpc\core\serializer" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\java_projects\MyRPC\test-server\src\main\java" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="wfb.rpc.common.exception" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.TestClient">
-    <configuration name="TestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="wfb.test.client.TestClient" />
+  <component name="RunManager" selected="Application.NettyTestClient">
+    <configuration name="NettyTestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="wfb.test.client.NettyTestClient" />
       <module name="test-client" />
       <extension name="coverage">
         <pattern>
@@ -94,8 +130,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="wfb.test.server.TestServer" />
+    <configuration name="NettyTestServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="wfb.test.server.NettyTestServer" />
+      <module name="test-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="wfb.test.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SocketTestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="wfb.test.client.SocketTestClient" />
+      <module name="test-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="wfb.test.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SocketTestServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="wfb.test.server.SocketTestServer" />
       <module name="test-server" />
       <extension name="coverage">
         <pattern>
@@ -109,8 +171,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestClient" />
-        <item itemvalue="Application.TestServer" />
+        <item itemvalue="Application.NettyTestClient" />
+        <item itemvalue="Application.NettyTestServer" />
+        <item itemvalue="Application.SocketTestClient" />
+        <item itemvalue="Application.SocketTestServer" />
       </list>
     </recent_temporary>
   </component>
@@ -122,8 +186,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709693806741</updated>
-      <workItem from="1709693807748" duration="4399000" />
+      <workItem from="1709693807748" duration="9074000" />
+      <workItem from="1709713264194" duration="14000" />
+      <workItem from="1709714452163" duration="9382000" />
     </task>
+    <task id="LOCAL-00001" summary="[v1.0]-基于jdk原生序列化与jdk动态代理的RPC">
+      <option name="closed" value="true" />
+      <created>1709708068700</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709708068700</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[v1.0]-基于jdk原生序列化与jdk动态代理的RPC">
+      <option name="closed" value="true" />
+      <created>1709708322350</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709708322350</updated>
+    </task>
+    <task id="LOCAL-00003" summary="添加了README.md文件">
+      <option name="closed" value="true" />
+      <created>1709708407239</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709708407239</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,5 +233,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="[v1.0]-基于jdk原生序列化与jdk动态代理的RPC" />
+    <MESSAGE value="添加了README.md文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了README.md文件" />
   </component>
 </project>
