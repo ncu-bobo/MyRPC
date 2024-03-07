@@ -1,7 +1,13 @@
 package wfb.rpc.core;
 
+import wfb.rpc.core.serializer.CommonSerializer;
+
 public interface RpcServer {
 
-    void start(int port);
+    int DEFAULT_SERIALIZER = CommonSerializer.KRYO_SERIALIZER;
+
+    void start();
+
+    <T> void publishService(T service, String serviceName);
 
 }

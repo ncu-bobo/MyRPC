@@ -4,11 +4,13 @@ package wfb.rpc.core.serializer;
 //提供三种序列化方案
 public interface CommonSerializer {
 
-    byte[] serialize(Object obj);
+    Integer KRYO_SERIALIZER = 0;
+    Integer JSON_SERIALIZER = 1;
+    Integer HESSIAN_SERIALIZER = 2;
+    Integer PROTOBUF_SERIALIZER = 3;
 
-    Object deserialize(byte[] bytes, Class<?> clazz);
-
-    int getCode();
+    // 默认序列化方案选择kryo
+    Integer DEFAULT_SERIALIZER = KRYO_SERIALIZER;
 
     static CommonSerializer getByCode(int code) {
         switch (code) {
@@ -18,9 +20,18 @@ public interface CommonSerializer {
                 return new JsonSerializer();
             case 2:
                 return new HessianSerializer();
+            case 3:
+                return new ProtobufSerializer();
             default:
                 return null;
         }
     }
 
+    byte[] serialize(Object obj);
+
+    Object deserialize(byte[] bytes, Class<?> clazz);
+
+    int getCode();
+
 }
+

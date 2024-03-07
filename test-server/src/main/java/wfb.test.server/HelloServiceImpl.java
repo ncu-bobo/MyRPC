@@ -4,7 +4,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import wfb.rpc.api.HelloObject;
 import wfb.rpc.api.HelloService;
+import wfb.rpc.core.annotation.Service;
 
+@Service
 public class HelloServiceImpl implements HelloService {
 
     private static final Logger logger = LoggerFactory.getLogger(HelloServiceImpl.class);

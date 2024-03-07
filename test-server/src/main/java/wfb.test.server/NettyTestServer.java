@@ -1,20 +1,18 @@
 package wfb.test.server;
 
 import wfb.rpc.api.HelloService;
-import wfb.rpc.core.netty.server.NettyServer;
-import wfb.rpc.core.registry.DefaultServiceRegistry;
-import wfb.rpc.core.registry.ServiceRegistry;
+import wfb.rpc.core.RpcServer;
+import wfb.rpc.core.annotation.ServiceScan;
+import wfb.rpc.core.net.netty.server.NettyServer;
+import wfb.rpc.core.serializer.CommonSerializer;
 
+@ServiceScan
 public class NettyTestServer {
 
     public static void main(String[] args) {
-        HelloService helloService = new HelloServiceImpl();
-        ServiceRegistry registry = new DefaultServiceRegistry();
-        // 注册服务
-        registry.register(helloService);
-        // 启动服务
-        NettyServer server = new NettyServer();
-        server.start(9999);
+        // 选用protobuf作为序列化方案
+        RpcServer server = new NettyServer("127.0.0.1", 9999, CommonSerializer.PROTOBUF_SERIALIZER);
+        server.start();
     }
 
 }
