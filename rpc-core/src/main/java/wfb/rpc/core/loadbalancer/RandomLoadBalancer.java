@@ -12,4 +12,9 @@ public class RandomLoadBalancer implements LoadBalancer {
         return instances.get(new Random().nextInt(instances.size()));
     }
 
+    @Override
+    public Instance select(List<Instance> instances, String clientIp) {
+        return select(instances);
+    }
+
 }

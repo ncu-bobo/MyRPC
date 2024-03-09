@@ -16,4 +16,9 @@ public class RoundRobinLoadBalancer implements LoadBalancer {
         return instances.get(index++);
     }
 
+    @Override
+    public Instance select(List<Instance> instances, String clientIp) {
+        return select(instances);
+    }
+
 }
